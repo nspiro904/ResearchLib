@@ -18,7 +18,7 @@ def getScores(classOutput: list) -> list:
     scores.append(entry["scores"])
   return scores
 
-def evaluate(input: ps.DataFrame, classOutput: list) -> list:
+def evaluate(input, classOutput: list) -> list:
   answers = input["misconception"]
   scores = getScores(classOutput)
   scoresData = calc_dScores(scores, answers)
